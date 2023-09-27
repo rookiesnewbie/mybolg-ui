@@ -1,0 +1,30 @@
+﻿/*基本框架CSS*/
+body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input {margin:0;padding:0;-webkit-text-size-adjust:none}
+h1, h2, h3, h4, h5, h6{font-size:12px;font-weight:normal}
+body>div{margin:0 auto}
+div {text-align:left}
+a img {border:0}
+body{color:#333;text-align:center;font:12px "宋体";}
+ul, ol, li {list-style-type:none;vertical-align:0}
+a {outline-style:none;color:#535353;text-decoration:none}
+a:hover{color:#D40000;text-decoration:none}
+
+
+.kePublic{ padding:150px 50px 50px;background:#348e8d;}
+
+
+/* 效果CSS开始 */
+.nav{line-height:40px;height:40px;width:765px;padding-left:234px;background:url(../images/nav1.jpg) no-repeat left -280px;position:relative;margin:0px auto;}
+.nav ul li{width:107px;float:left;}
+.nav_a{font:16px/40px "微软雅黑";color:#FFF;display:block;}
+.nav_cut .nav_a,.nav_hover .nav_a{color:#2d2d2d;}
+.nav_a:hover{color:#2d2d2d;text-decoration:none}
+.nav0{background:url(../images/nav1.jpg) no-repeat left top;}
+.nav1{background:url(../images/nav1.jpg) no-repeat left -40px;}
+.nav2{background:url(../images/nav1.jpg) no-repeat left -80px;}
+.nav3{background:url(../images/nav1.jpg) no-repeat left -120px;}
+.nav4{background:url(../images/nav1.jpg) no-repeat left -160px;}
+.nav5{background:url(../images/nav1.jpg) no-repeat left -200px;}
+.nav6{background:url(../images/nav1.jpg) no-repeat left -240px;}
+.logo{position:absolute;left:23px;top:-45px;}
+/* 效果CSS结束 */

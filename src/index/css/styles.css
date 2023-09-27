@@ -1,0 +1,27 @@
+.text-container {
+  width: 200px; /* 设置容器宽度，根据实际情况调整 */
+  position: relative; /* 让伪元素相对于容器定位 */
+  overflow: hidden; /* 隐藏超出容器的部分文本 */
+}
+
+.hoverable-text {
+  white-space: nowrap; /* 防止文本自动换行 */
+  overflow: hidden; /* 隐藏溢出的文本 */
+  text-overflow: ellipsis; /* 当文本溢出时显示省略号 */
+}
+
+.hoverable-text::before {
+  content: attr(data-text); /* 设置悬浮内容为文本的 data-text 属性 */
+  position: absolute; /* 绝对定位 */
+  top: 0; /* 悬浮元素顶部与容器顶部对齐 */
+  left: 100%; /* 悬浮元素左边界与容器右边界对齐 */
+  background-color: rgba(0, 0, 0, 0.8); /* 悬浮背景颜色 */
+  color: #fff; /* 悬浮文本颜色 */
+  padding: 5px; /* 内边距，增加可读性 */
+  white-space: normal; /* 允许悬浮内容自动换行 */
+  display: none; /* 初始状态下隐藏悬浮元素 */
+}
+
+.hoverable-text:hover::before {
+  display: block; /* 鼠标悬浮时显示悬浮元素 */
+}
