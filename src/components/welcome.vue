@@ -87,10 +87,9 @@
 			<div class="set" v-show="lgBtn">
 				<img 
 				v-popover:popover4
-				:src="qqUser.avatar || '../../static/img/visity.png'" 
-				alt="" 
+				:src="user.avatar != null? user.avatar : '../../static/img/visity.png'" alt="" 
 				id="seting">
-				<span style="font-size:25px; margin-left: 10px" >{{ qqUser.nickName || user.nickName }}</span>
+				<span style="font-size:25px; margin-left: 10px" >{{ user.nickName }}</span>
 			</div>
 		</ul>
 	</div>
@@ -344,7 +343,7 @@ export default {
 		...mapState(['user']),  //获取store的用户信息
 		...mapState(['qqUser']),  //获取store的qq用户信息
 		...mapState(['newArticle']),  //获取store的最新文章信息
-		...mapState(['token']),  //获取store的最新文章信息
+		
 	},
 
   	watch: {
@@ -374,8 +373,10 @@ export default {
 
 	
 	mounted() {
-		// console.log(this.token)
-		if (this.token != null) {
+		
+		// const _user = localStorage.getItem('user')
+		console.log(this.user)
+		if (this.user) {
 			this.lgBtn = true
 		} else {
 			this.lgBtn = false
@@ -449,6 +450,8 @@ export default {
 		serachInfo () {
 			this.$message.warning('此功能尚未开发。。。。')
 		},
+
+		
 		saveUserInfo (info) {
 			
 			this.$router.push({path: '/'})
@@ -806,6 +809,7 @@ export default {
 	width: 80%;
 	// margin: auto;
 	display: flex;
+	
 }
 .right-content {
 	margin-top: 10px;
@@ -815,6 +819,7 @@ export default {
 	animation: lingt 3s ease infinite;
 	box-shadow: 0px 0px 15px white;
     border-radius: 5px;
+	
 }
 @keyframes lingt {
 	0% { box-shadow: 0px 0px 0px white;}                          /* 动画开始时的不透明度 */

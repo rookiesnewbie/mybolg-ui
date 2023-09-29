@@ -21,7 +21,7 @@ const actions = {
         // console.log(res);
           if (res.code === 200) { 
           // cookie中保存token
-            setToken(res.data.token)
+          setToken(res.data.token)
           // vuex中保存token
           commit('SET_TOKEN', res.data.token) 
           localStorage.setItem('user',JSON.stringify(res.data))
@@ -44,7 +44,6 @@ const actions = {
           if (res.code === 200) { 
           // cookie中保存token
           setToken(res.data.userInfo.token)
-            localStorage.setItem('user', JSON.stringify(res.data.userInfo))
           // vuex中保存token
           commit('SET_TOKEN', res.data.userInfo.token)
           commit('SET_USER', res.data.userInfo)
@@ -90,7 +89,7 @@ const mutations = {
     state.user.password = user.password
     state.user.phone = user.phone
     state.user.qqOpenId = user.qqOpenId
-    state.user.qqAvatar = user.qqAvatar
+    state.user.avatar = user.avatar
   },
 
   SET_USER: (state, user) => {
@@ -101,7 +100,7 @@ const mutations = {
     state.user.password = user.password
     state.user.phone = user.phone
     state.user.qqOpenId = user.qqOpenId
-    state.user.qqAvatar = user.qqAvatar
+    state.user.avatar = user.avatar
   },
 
   //保存qq登录用户信息
@@ -133,7 +132,7 @@ const mutations = {
     state.user.password = null
     state.user.phone = null
     state.user.qqOpenId = null
-    state.user.qqAvatar = null
+    state.user.avatar = null
   },
   
   REMOVE_TOKEN: (state) => {

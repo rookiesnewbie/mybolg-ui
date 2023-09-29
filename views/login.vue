@@ -350,7 +350,10 @@ export default {
         this.$cookies.set("uid", res.data.id);
         // localStorage.setItem('user', res.data);//保存用户信息到浏览器
         this.$message.success(res.msg);
-        this.$router.push("/")
+        this.$router.push({ path: "/" });
+      }).then(() => {
+        debugger
+        
       });
     },
 

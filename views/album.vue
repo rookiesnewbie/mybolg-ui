@@ -30,6 +30,7 @@
   				<div class="out_left">
   					<img :src="picList[2].url" class="pic" />
   				</div>
+          <!--右图片 -->
   				<div class="out_right">
   					<img :src="picList[3].url" class="pic" />
   				</div>

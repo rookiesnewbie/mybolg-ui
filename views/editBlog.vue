@@ -99,9 +99,8 @@
       //判断是否登录
       if (!this.$cookies.get('access_token')) {
         this.$message({
-          type: warning,
           message: '还未登录，请先登录',
-          duration: 3000
+          type: 'warning'
         });
         this.$router.push({ path: '/login' })
 
