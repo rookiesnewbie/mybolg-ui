@@ -132,7 +132,7 @@
 						<img class="tag" src="../../static/img/logo/weixin.png" alt="微信号">
 					</el-tooltip>
 					<el-tooltip class="item" effect="dark" content="加我QQ" placement="bottom">
-						<img class="tag" src="../../static/img/qq.png" alt="加我QQ" @click="friendsLink('http://wpa.qq.com/msgrd?v=3&uin=2049448867&site=qq&menu=yes')">
+						<img class="tag" style="width: 35px; height: 40px;" src="../../static/img/qq.png" alt="加我QQ" @click="friendsLink('http://wpa.qq.com/msgrd?v=3&uin=2049448867&site=qq&menu=yes')">
 					</el-tooltip>
 					
 					<!-- <a href="http://wpa.qq.com/msgrd?v=3&uin=2236736269&site=qq&menu=yes" target="_blank">添加QQ好友</a>

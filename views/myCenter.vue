@@ -185,6 +185,10 @@ export default {
 
     //获取验证码
     sendEamilCode() {
+      if (this.ruleForm.password == null) {
+        this.$message.warning('密码不能为空')
+        return
+      }
       this.request.get(`/user/sendEmailCode`, {
         params: {
           email: this.info.email,
