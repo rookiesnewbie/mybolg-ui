@@ -83,7 +83,7 @@
     <ul class="content-box">
       <li v-for="(item, index) in msgList" :key="index" :class="index % 2 === 0 ? 'visit' : 'visits'">
         <div class="pic">
-          <img :src="item.qq_avatar? item.qq_avatar : '../static/img/visity.png'" alt="">
+          <img :src="item.avatar? item.avatar : '../static/img/visity.png'" alt="">
         </div>
         <div class="msg-content">
           <div class="content-head">

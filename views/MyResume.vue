@@ -44,7 +44,7 @@ export default {
     };
   },
   created() {
-    if (this.user.nickname === 'admin') {
+    if (this.user.role === 1) {
       this.flag = true;
     }
     this.getResume()

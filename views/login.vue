@@ -4,13 +4,13 @@
     <el-form :model="loginForm" ref="loginForm" class="login-form">
       <el-form-item
         label="昵  称:"
-        prop="name"
+        prop="nickName"
         label-width="90px"
         v-if="actionType"
         :rules="[{ required: true, message: '请输入昵称', trigger: 'blur' }]"
       >
         <el-input
-          v-model="loginForm.name"
+          v-model="loginForm.nickName"
           class="psw"
           placeholder="请输入昵称"
         ></el-input>
@@ -213,7 +213,7 @@ export default {
         email: "",
         psw: "",
         npsw: "",
-        nickname: "",
+        nickName: "",
         validCode: "",
       },
       validCode: "", //验证码
@@ -307,7 +307,7 @@ export default {
     regist() {
       // this.loginForm.password = this.$md5(this.loginForm.psw);
       let info = {
-        nickname: this.loginForm.name,
+        nickName: this.loginForm.nickName,
         email: this.loginForm.email,
         password: this.loginForm.psw,
         validCode: this.loginForm.validCode,
@@ -334,7 +334,10 @@ export default {
     //登录
     login() {
       // this.loginForm.psw = this.$md5(this.loginForm.psw);
-      let info = { email: this.loginForm.email, password: this.loginForm.psw };
+      let info = {
+        email: this.loginForm.email,
+        password: this.loginForm.psw
+      };
 
       if (
         this.loginForm.validCode.toLowerCase() !== this.validCode.toLowerCase()

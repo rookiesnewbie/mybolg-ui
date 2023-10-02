@@ -5,7 +5,7 @@
         <el-input style="width: 200px" placeholder="请输入关键字搜索" suffix-icon="el-icon-search" v-model="keyWorld"  @keyup.enter.native="page"/>
         <el-button class="ml-5" type="primary" @click="page" icon="el-icon-search">搜索</el-button>
         <el-button type="warning" @click="reset">重置</el-button>
-        <el-button type="warning" @click="uploadVideo" icon="el-icon-s-promotion">上传视频</el-button>
+        <el-button type="warning" @click="uploadVideo" icon="el-icon-s-promotion" v-if="user.role === 1">上传视频</el-button>
 
       </div>
       <div class="block" >
@@ -73,6 +73,7 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from "vuex";
 export default {
   
     data() {
@@ -109,6 +110,9 @@ export default {
      
       };
     },
+    computed: {
+    ...mapGetters(['user'])
+  },
     methods: {
       // submitForm(formName) {
       //   this.$refs[formName].validate((valid) => {

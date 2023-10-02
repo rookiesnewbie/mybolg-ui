@@ -66,7 +66,7 @@ request.interceptors.response.use(
       if (error.code === 'ECONNABORTED') {
         // 请求超时
         ElementUI.Message({
-            message: "请求超时，请稍后再试",
+            message: "服务器繁忙，请稍后再试",
             type: "error"
         })
           // 这里可以添加处理请求超时的逻辑

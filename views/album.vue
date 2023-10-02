@@ -9,7 +9,7 @@
           :before-upload="beforePictureUpload"
           multiple
           >
-          <el-button size="small" type="primary">上传图片</el-button>
+          <el-button size="small" type="primary" v-if="user.role === 1">上传图片</el-button>
         </el-upload>
       </div>
 
@@ -66,7 +66,7 @@
   		<div style="position:absolute;left:10px;bottom:80px;">
   			<!-- 隐藏播放条：删除controls="controls"部分 -->
   			<audio autoplay="autopaly" loop="loop" controls="controls" id="audios">
-  				<source src="https://ltmyblog.oss-cn-shenzhen.aliyuncs.com/myBlog/video/bb9a573b561a49f9be8a1f1284895838%E5%BC%A0%E8%8A%B8%E4%BA%AC%20-%20%E5%81%8F%E7%88%B1.mp3" type="audio/mp3" />
+  				<source src="https://ltmyblog.oss-cn-shenzhen.aliyuncs.com/myBlog/video/%E9%9D%92%E9%B8%9F%E9%A3%9E%E9%B1%BC%20-%20%E6%AD%A4%E7%94%9F%E4%B8%8D%E6%8D%A2.mp3" type="audio/mp3" />
   			</audio>
   		</div>
 
@@ -75,6 +75,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: "Album",
   data() {
@@ -85,6 +86,10 @@ export default {
       fileLists: [],
       picList: [],
     };
+  },
+
+  computed:{
+    ...mapGetters(['user'])
   },
 
   created() {
