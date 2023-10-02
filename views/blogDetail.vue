@@ -67,7 +67,7 @@
        <div v-for="item in comments" :key="item.id" style="border-bottom: 1px solid #ccc; padding: 10px 0; ">
           <div style="display: flex">
             <div style="width: 100px; text-align: center">
-              <el-image src="../../static/img/visity.png" style="width: 50px; height: 50px; border-radius: 50%"></el-image>
+              <el-image :src="item.avatar? item.avatar :'../../static/img/visity.png'" style="width: 50px; height: 50px; border-radius: 50%"></el-image>
             </div> <!--  头像-->
             <div style="flex: 1; font-size: 14px; padding: 5px 0; line-height: 25px">
               <b>{{ item.nickname }}：</b>
@@ -92,7 +92,7 @@
                 
                 <div style="font-size: 14px; padding: 5px 0; line-height: 25px">
                   <div>
-                    <el-image src="../../static/img/visity.png" style="width: 40px; height: 40px; border-radius: 50%;"></el-image>
+                    <el-image :src="subItem.avatar?subItem.avatar : '../../static/img/visity.png'" style="width: 40px; height: 40px; border-radius: 50%;"></el-image>
                     <b>{{ subItem.nickname }} 回复:</b>
                     <b style="color: #3a8ee6" v-if="subItem.pnickname">@{{ subItem.pnickname }}</b>
                   </div>
@@ -186,10 +186,11 @@
      watch: {
       '$route.params.blogId'(newBlogId) {
         // 当路由参数 blogId 发生变化时触发
-        this.blogId = newBlogId;
+        this.id = newBlogId;
 
         // 在这里执行根据新的 blogId 加载数据或其他操作
-        this.getBlogDetail(newBlogId);
+           this.getBlogDetail(newBlogId);
+        this.loadComment()
       },
     },
 
@@ -276,6 +277,7 @@
         
         //评论列表
         loadComment() {
+          // debugger
             // this.$axios.get(`${this.api}/comment/tree/${this.id}`).then(res => {
               this.request.get(`/comment/tree/${this.id}`).then(res => {
             // console.log(res.data.data);

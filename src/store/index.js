@@ -141,6 +141,11 @@ const mutations = {
   
   REMOVE_TOKEN: (state) => {
     state.token = null
+  },
+
+  SET_AVATAR: (state, value) => {
+     console.log('上传头像被调用了');
+    state.user.avatar = value
   }
 }
 
