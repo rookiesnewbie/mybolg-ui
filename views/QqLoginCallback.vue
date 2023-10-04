@@ -38,8 +38,6 @@ export default {
         if (res.code === 200) {
           this.$cookies.set('access_token', res.data.userInfo.token)
           this.$cookies.set('uid', res.data.userInfo.id)
-          localStorage.setItem('user', JSON.stringify(res.data.userInfo));//保存用户信息到浏览器
-
           this.$message.success(res.msg)
 
           this.$router.push({path:"/"})
@@ -58,11 +56,6 @@ export default {
       
     },
 
-    qqLoginCallback(){},
-
-    setuser() {
-			this.user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : {}
-    },
 
   },
   created() {

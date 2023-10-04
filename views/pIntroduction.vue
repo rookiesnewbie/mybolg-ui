@@ -69,7 +69,7 @@ export default {
     let x = '200', y = '200', z = '200';
     return {
       showPhoto: false,
-      srcList: ['../static/img/me/me.png'],
+      srcList: ['../static/img/me/me.png','../static/img/me/白底证件照.png','../static/img/me/红底证件照.png'],
       size:{
 				x:x,
 				y:y,

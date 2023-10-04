@@ -353,17 +353,20 @@ export default {
 
 
 	mounted() {
+		console.log(this)
 
 		// const _user = localStorage.getItem('user')
 		// console.log('nextTick',this.$nextTick)
-		this.$nextTick(() => {
-			if (this.user.nickName) {
+		if (this.user.nickName) {
 			this.lgBtn = true
 		} else {
 			this.lgBtn = false
 		}
-			}
-		)
+		
+		// this.$nextTick(() => {
+			
+		// 	}
+		// )
 		// console.log(this.user)
 		
 

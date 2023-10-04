@@ -85,11 +85,6 @@ const routes = [
           name: 'MyResume',
           component: resolve => require(['../../views/MyResume'], resolve),
         }, 
-        {
-          path: '/qqlogincalback',
-          name: 'qq登录回调',
-          component: resolve => require(['../../views/QqLoginCallback'], resolve),
-        },
       ]
     },
 
@@ -104,6 +99,12 @@ const routes = [
       name: 'login',
       component: resolve => require(['../../views/login'], resolve),
   },
+
+  {
+          path: '/qqlogincalback',
+          name: 'qq登录回调',
+          component: resolve => require(['../../views/QqLoginCallback'], resolve),
+        },
 
   {
       path: '/register',

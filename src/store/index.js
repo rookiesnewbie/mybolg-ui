@@ -46,7 +46,11 @@ const actions = {
           setToken(res.data.userInfo.token)
           // vuex中保存token
           commit('SET_TOKEN', res.data.userInfo.token)
+          localStorage.setItem('user', JSON.stringify(res.data.userInfo));//保存用户信息到浏览器
+            
           commit('SET_USER', res.data.userInfo)
+
+          console.log('QQ登录被调用，数据以保存');
         }
 				// 传递给welcome.vue : store.dispatch('Login').then(data)
           resolve(res)	
@@ -151,7 +155,16 @@ const mutations = {
 
 //准备state——用于存储数据
 const state = {
-  user: {}, //当前用户信息
+  user: {
+    id: null,
+    nickName: '',
+    email: '',
+    password: '',
+    role: '',
+    phone: '',
+    qqOpenId: '',
+    avatar: ''
+  }, //当前用户信息
   token: getToken(),//当前用户的token
   qqUser: {}, //qq登录用户信息
   newArticle: [], //最新文章

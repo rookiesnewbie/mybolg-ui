@@ -348,16 +348,12 @@ export default {
       this.$store.dispatch("Login", info).then((res) => {
         this.loginDialog = false;
         this.actionType = false;
-        this.lgBtn = true;
         this.$cookies.set("access_token", res.data.token);
         this.$cookies.set("uid", res.data.id);
         // localStorage.setItem('user', res.data);//保存用户信息到浏览器
         this.$message.success(res.msg);
         this.$router.push({ path: "/" });
-      }).then(() => {
-        debugger
-        
-      });
+      })
     },
 
     qqLogin() {
