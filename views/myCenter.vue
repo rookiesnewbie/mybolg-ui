@@ -2,7 +2,22 @@
   <div class="mycter">
     <h1 class="info">基本信息:</h1>
     <div class="info-ct">
-      <img :src="info.avatar ? info.avatar: '../../static/img/visity.png'" alt="">
+      <!-- <img :src="info.avatar ? info.avatar: '../../static/img/visity.png'" alt=""> -->
+      <el-image
+              style="width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              -webkit-transition-property: -webkit-transform;
+              -webkit-transition-duration: 1s;
+              -moz-transition-property: -moz-transform;
+              -moz-transition-duration: 1s;
+              -webkit-animation: rotate 10s linear infinite;
+              -moz-animation: rotate 10s linear infinite;
+              -o-animation: rotate 10s linear infinite;
+              animation: rotate 10s linear infinite;"
+              :src="info.avatar ? info.avatar: '../../static/img/visity.png'" alt=""
+              :preview-src-list="srcList">
+      </el-image>
       <div class="nm-bx">
         <span>昵称：</span>     
         <span>{{info.nickName }}</span><br/>
@@ -72,6 +87,7 @@ export default {
         // figureurl_qq_2: '',
         // nickname: '',
       },
+      srcList:[],
       user:localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : {},
       dialogFormVisible: false,
       
@@ -129,6 +145,7 @@ export default {
           // Object.assign(this.info, {figureurl_qq_2: res.data.url, nickname:res.data.nickname})
           // console.log(res.data);
           this.info = res.data
+          this.srcList.push(res.data.avatar)
       })
     },
     qqInfo () {

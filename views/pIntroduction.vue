@@ -3,10 +3,16 @@
     <el-header class="head">
       <div class="imgbox">
         <!-- <img src="../static/img/me.jpg" alt=""> -->
-        <img src="../static/img/me/me.png" alt="me">
+        <!-- <img src="../static/img/me/me.png" alt="me" @click="showPhoto = true"> -->       
+          <el-image
+            style="width: 60px;height: 60px;border-radius: 50%;"
+            src="../static/img/me/me.png" 
+            :preview-src-list="srcList">
+          </el-image>
       </div>
       <h3 class="myself">关于博主</h3>
     </el-header>
+
     <el-main style="padding: 10px 0">
       
       <p>
@@ -62,6 +68,8 @@ export default {
   data () {
     let x = '200', y = '200', z = '200';
     return {
+      showPhoto: false,
+      srcList: ['../static/img/me/me.png'],
       size:{
 				x:x,
 				y:y,

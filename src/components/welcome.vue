@@ -201,7 +201,7 @@ export default {
 	data() {
 		return {
 			countdown: 60, // 倒计时时间（秒）
-			imageUrl: JSON.parse(localStorage.getItem("user")).avatar,
+			imageUrl: localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")).avatar : '',
 			CurrentUser: {},
 			serchContent: '',
 			lgBtn: false,
@@ -355,12 +355,17 @@ export default {
 	mounted() {
 
 		// const _user = localStorage.getItem('user')
-		console.log(this.user)
-		if (this.user) {
+		// console.log('nextTick',this.$nextTick)
+		this.$nextTick(() => {
+			if (this.user.nickName) {
 			this.lgBtn = true
 		} else {
 			this.lgBtn = false
 		}
+			}
+		)
+		// console.log(this.user)
+		
 
 		//网页爱心
 		!function (e, t, a) {
