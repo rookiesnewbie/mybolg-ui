@@ -426,8 +426,11 @@ export default {
 	},
 	created() {
 
+		
 
 		this.getnewArtic()
+		// debugger
+		// this.$store.dispatch('getUserInfo')
 	},
 
 	methods: {

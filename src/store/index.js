@@ -2,7 +2,7 @@
 
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { login,qqLoginCallback,updateUser} from '../api/account';
+import { login,qqLoginCallback,updateUser,getUserInfo} from '../api/account';
 import createPersistedState from 'vuex-persistedstate'
 import { getToken, setToken, removeToken } from '../utils/token'
 
@@ -69,6 +69,22 @@ const actions = {
           localStorage.clear()
           localStorage.setItem('user',JSON.stringify(accountForm))
           commit('UPDATE_USER', accountForm)
+        }
+				// 传递给welcome.vue : store.dispatch('Login').then(data)
+          resolve(res)	
+          }
+			 ).catch(error => {
+          reject(error)
+        })
+      })
+  },
+
+    //获取用户信息
+    getUserInfo({ commit }) {
+      return new Promise((resolve, reject) => {
+        getUserInfo().then(res => { 
+          if (res.code === 200) { 
+           commit('SET_USER', res.data)
         }
 				// 传递给welcome.vue : store.dispatch('Login').then(data)
           resolve(res)	

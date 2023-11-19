@@ -32,3 +32,11 @@ export function qqLoginCallback(searchobj) {
   })
 }
 
+export function getUserInfo() {
+  return request({
+    url: '/user/detail',
+    method: 'get',
+  })
+}
+
+
