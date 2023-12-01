@@ -180,8 +180,9 @@
 				<span>@版权所有</span>
 				<span>Design by:</span>
 				<span>李腾&nbsp;</span>
+				<span>|</span>
 				<span>备案号:</span>
-				<span>黔ICP备2023004076号-1</span>
+				<a href="https://beian.miit.gov.cn/#/Integrated/recordQuery" target="_blank">黔ICP备2023004076号-1</a>
 			</div>
 		</el-footer>
 	</div>

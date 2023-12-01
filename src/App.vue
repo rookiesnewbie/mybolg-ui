@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import autofit from 'autofit.js'
 export default {
   name: 'App',
   // created () {
@@ -14,6 +15,19 @@ export default {
   //   //   localStorage.pagecount = 1
   //   // }
   // }
+  // mounted(){
+  //   autofit.init({
+  //       dh: 1080,
+  //       dw: 1920,
+  //       el:"body",
+  //       resize: true,
+  //     }
+  //   )
+  // },
+  // destroyed(){
+  //   autofit.off()
+  // }
+  
 }
 </script>
 
