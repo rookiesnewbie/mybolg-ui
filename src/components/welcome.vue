@@ -162,15 +162,17 @@
 				:action="`${this.api}/user/upload/avatar/${user.id}`"
 				:show-file-list="false"
 				:on-success="handleAvatarSuccess"
-				:before-upload="beforeAvatarUpload">
+				:before-upload="beforeAvatarUpload"
+  				:on-progress="uploadAvatarProgress">
 				<img v-if="imageUrl" :src="imageUrl" class="avatar">
 				<i v-else class="el-icon-plus avatar-uploader-icon"></i>
 			</el-upload>
+			<el-progress v-if="uploading" :percentage="uploadPercentage" />
 
 		</p-dialog>
 		<el-popover ref="popover4" placement="bottom" width="100" popper-class="set-box" trigger="hover">
 			<div class="action-cl">
-				<p @click="settForm = true">上传头像</p>
+				<p @click="showDialog()">上传头像</p>
 				<p @click="siginOut">退出</p>
 				<p @click="personalCenter">个人中心</p>
 			</div>
@@ -202,7 +204,8 @@ export default {
 	data() {
 		return {
 			countdown: 60, // 倒计时时间（秒）
-			imageUrl: localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")).avatar : '',
+			// imageUrl: localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")).avatar : '',
+			imageUrl: '',
 			CurrentUser: {},
 			serchContent: '',
 			lgBtn: false,
@@ -315,6 +318,8 @@ export default {
 			keyWorld: '',
 			validCode: '', //验证码
 			isButtonDisabled: false, // 获取验证码按钮是否可点击
+			uploading: false,  //是否正在上传
+    		uploadPercentage: 0  //上传文件的进度
 		}
 	},
 	computed: {
@@ -435,6 +440,15 @@ export default {
 	},
 
 	methods: {
+		showDialog(){
+			this.settForm = true;
+			this.request.post(`/user/info/${this.user.id}`).then(res => {
+				if(res.code == 200){
+					this.imageUrl =res.data.avatar
+				}
+			})
+		},
+
 		handleAvatarSuccess(res, file) {
 			console.log(res);
 			console.log(file);
@@ -445,18 +459,30 @@ export default {
 			this.$store.commit('SET_AVATAR',res.data);
 			this.$message.success(res.msg)
 			this.settForm = false;
+
+			// 关闭进度条
+			this.uploading = false;
+    		this.uploadPercentage = 0;
 		},
 		beforeAvatarUpload(file) {
-			const isPNG = file.type === 'image/png';
+			// const isPNG = file.type === 'image/png';
+			const suffix = file.name.split('.')[1]
 			const isLt2M = file.size / 1024 / 1024 < 2;
 
-			if (!isPNG) {
-				this.$message.error('上传头像图片只能是 PNG 格式!');
+			if (['png','jpeg','jpg'].indexOf(suffix) < 0) {
+				this.$message.error('上传头像图片只能是 png、jpeg、jpg  格式!');
 			}
 			if (!isLt2M) {
 				this.$message.error('上传头像图片大小不能超过 2MB!');
 			}
-			return isPNG && isLt2M;
+			return true && isLt2M;
+		},
+
+
+		//上传进度条
+		uploadAvatarProgress(event, file) {
+			// 在上传过程中更新进度条的方法
+			this.uploadPercentage = Math.round((event.loaded / event.total) * 100);
 		},
 
 		personalCenter() {

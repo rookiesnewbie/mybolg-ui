@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import autofit from 'autofit.js'
+// import autofit from 'autofit.js'
 export default {
   name: 'App',
   // created () {
