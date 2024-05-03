@@ -6,6 +6,293 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "77697",
+      "name": "点赞",
+      "font_class": "dianzan",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "128958",
+      "name": "git",
+      "font_class": "git",
+      "unicode": "e799",
+      "unicode_decimal": 59289
+    },
+    {
+      "icon_id": "493509",
+      "name": "回复",
+      "font_class": "huifu",
+      "unicode": "e7ac",
+      "unicode_decimal": 59308
+    },
+    {
+      "icon_id": "809963",
+      "name": "点赞",
+      "font_class": "dianzan1",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "2076265",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e891",
+      "unicode_decimal": 59537
+    },
+    {
+      "icon_id": "2420828",
+      "name": "JVM",
+      "font_class": "JVM",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "3176822",
+      "name": "Oracle",
+      "font_class": "Oracle",
+      "unicode": "ea23",
+      "unicode_decimal": 59939
+    },
+    {
+      "icon_id": "3970852",
+      "name": "CSS3",
+      "font_class": "CSS",
+      "unicode": "e705",
+      "unicode_decimal": 59141
+    },
+    {
+      "icon_id": "6183385",
+      "name": "hadoop",
+      "font_class": "hadoop-copy",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "6496024",
+      "name": "Angular",
+      "font_class": "Angular",
+      "unicode": "e798",
+      "unicode_decimal": 59288
+    },
+    {
+      "icon_id": "6496026",
+      "name": "Vue",
+      "font_class": "Vue",
+      "unicode": "e79a",
+      "unicode_decimal": 59290
+    },
+    {
+      "icon_id": "6496027",
+      "name": "React",
+      "font_class": "React",
+      "unicode": "e79b",
+      "unicode_decimal": 59291
+    },
+    {
+      "icon_id": "6496056",
+      "name": "Nodejs",
+      "font_class": "Nodejs",
+      "unicode": "e79c",
+      "unicode_decimal": 59292
+    },
+    {
+      "icon_id": "7420048",
+      "name": "spring",
+      "font_class": "spring",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "7467733",
+      "name": "RabbitMQ",
+      "font_class": "rabbitmq",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "7709732",
+      "name": "环境变量",
+      "font_class": "huanjingbianliang",
+      "unicode": "ed95",
+      "unicode_decimal": 60821
+    },
+    {
+      "icon_id": "10575959",
+      "name": "Docker",
+      "font_class": "docker",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "12600761",
+      "name": "jsx",
+      "font_class": "jsx",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "12601045",
+      "name": "c",
+      "font_class": "c",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "13304033",
+      "name": "python",
+      "font_class": "python",
+      "unicode": "e690",
+      "unicode_decimal": 59024
+    },
+    {
+      "icon_id": "13304147",
+      "name": "vuex-store",
+      "font_class": "vuex-store",
+      "unicode": "e6bb",
+      "unicode_decimal": 59067
+    },
+    {
+      "icon_id": "15378397",
+      "name": "go",
+      "font_class": "go",
+      "unicode": "eba6",
+      "unicode_decimal": 60326
+    },
+    {
+      "icon_id": "17380196",
+      "name": "SPRINGMVC",
+      "font_class": "SPRINGMVC",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "18898887",
+      "name": "springboot",
+      "font_class": "springboot",
+      "unicode": "e713",
+      "unicode_decimal": 59155
+    },
+    {
+      "icon_id": "19035880",
+      "name": "js",
+      "font_class": "js",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "19450576",
+      "name": "HTML",
+      "font_class": "HTML",
+      "unicode": "eac7",
+      "unicode_decimal": 60103
+    },
+    {
+      "icon_id": "21293204",
+      "name": "mybatis",
+      "font_class": "mybatis",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "22844594",
+      "name": "Nginx",
+      "font_class": "Nginx",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "24191677",
+      "name": "java",
+      "font_class": "java",
+      "unicode": "e6d7",
+      "unicode_decimal": 59095
+    },
+    {
+      "icon_id": "24610002",
+      "name": "SPRINGCLOUD",
+      "font_class": "SPRINGCLOUD",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
+      "icon_id": "25601276",
+      "name": "MySQL-icon-02",
+      "font_class": "MySQL-icon-02",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "27272400",
+      "name": "jenkins_",
+      "font_class": "jenkins_",
+      "unicode": "ec6e",
+      "unicode_decimal": 60526
+    },
+    {
+      "icon_id": "31202651",
+      "name": "C++",
+      "font_class": "a-C",
+      "unicode": "e75f",
+      "unicode_decimal": 59231
+    },
+    {
+      "icon_id": "33468764",
+      "name": "php",
+      "font_class": "php",
+      "unicode": "e773",
+      "unicode_decimal": 59251
+    },
+    {
+      "icon_id": "35608040",
+      "name": "mybatisplus",
+      "font_class": "mybatisplus",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "37434610",
+      "name": "Redis",
+      "font_class": "Redis",
+      "unicode": "e788",
+      "unicode_decimal": 59272
+    },
+    {
+      "icon_id": "39827942",
+      "name": "spring-security",
+      "font_class": "spring-security",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "39964684",
+      "name": "icon-chatgpt",
+      "font_class": "chatgpticon",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "6185329",
+      "name": "最新文章",
+      "font_class": "zuixinwenzhang",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "7633152",
+      "name": "友情连接",
+      "font_class": "youqinglianjie",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "3176645",
+      "name": "GitHub",
+      "font_class": "GitHub",
+      "unicode": "ea0a",
+      "unicode_decimal": 59914
+    },
+    {
       "icon_id": "38287287",
       "name": "gitee",
       "font_class": "gitee",
@@ -32,13 +319,6 @@
       "font_class": "weixin",
       "unicode": "e665",
       "unicode_decimal": 58981
-    },
-    {
-      "icon_id": "348534",
-      "name": "github",
-      "font_class": "github",
-      "unicode": "eaf6",
-      "unicode_decimal": 60150
     }
   ]
 }

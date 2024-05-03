@@ -1,34 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Snow Effect</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            background-color: #D3D3D3;
-        }
-        canvas {
-            display: block;
-        }
-    </style>
-</head>
-<body>
-    
-    <!-- <canvas id="snow">
-    </canvas> -->
-    <div>666</div>
-
-    <canvas>
-        你的浏览器不支持 canvas，请升级你的浏览器。
-    </canvas>
-</body>
-<script>
-
-  
-    // JavaScript 代码将在下面继续
-    document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     var canvas = document.getElementById('snow');
     var ctx = canvas.getContext('2d');
 
@@ -93,5 +63,3 @@
     animate();
 });
 </script>
-
-</html>
