@@ -113,25 +113,41 @@
 					<div class="link-content">
 						<el-tooltip class="item" effect="dark" content="https://blog.csdn.net/weixin_50117748"
 							placement="top">
-							<img class="tag" src="../../static/img/logo/csdn.png" alt="csdn地址"
-								@click="friendsLink('https://blog.csdn.net/weixin_50117748')">
+							<!-- <img class="tag" src="../../static/img/logo/csdn.png" alt="csdn地址"
+								@click="friendsLink('https://blog.csdn.net/weixin_50117748')"> -->
+							<svg class="icon" aria-hidden="true" style="margin-left: 15px;">
+								<use xlink:href="#icon-csdn" @click="friendsLink('https://blog.csdn.net/weixin_50117748')"></use>
+							</svg>
+
 
 						</el-tooltip>
 						<el-tooltip class="item" effect="dark" content="https://github.com/rookiesnewbie" placement="top">
-							<img class="tag" src="../../static/img/logo/github.png" alt="Github地址"
-								@click="friendsLink('https://github.com/rookiesnewbie')">
+							<!-- <img class="tag" src="../../static/img/logo/github.png" alt="Github地址"
+								@click="friendsLink('https://github.com/rookiesnewbie')"> -->
+							<svg class="icon" aria-hidden="true" style="margin-left: 15px;">
+								<use xlink:href="#icon-github" @click="friendsLink('https://github.com/rookiesnewbie')"></use>
+							</svg>
 						</el-tooltip>
 
 						<el-tooltip class="item" effect="dark" content="https://gitee.com/lisircode" placement="top">
-							<img class="tag" src="../../static/img/logo/gitee.png" alt="Gitee地址"
-								@click="friendsLink('https://gitee.com/lisircode')">
+							<!-- <img class="tag" src="../../static/img/logo/gitee.png" alt="Gitee地址"
+								@click="friendsLink('https://gitee.com/lisircode')"> -->
+							<svg class="icon" aria-hidden="true" style="margin-left: 15px;">
+								<use xlink:href="#icon-gitee" @click="friendsLink('https://gitee.com/lisircode')"></use>
+							</svg>
 						</el-tooltip>
 						<el-tooltip class="item" effect="dark" content="微信号:lt2049448867" placement="top">
-							<img class="tag" src="../../static/img/logo/weixin.png" alt="微信号">
+							<!-- <img class="tag" src="../../static/img/logo/weixin.png" alt="微信号"> -->
+							<svg class="icon" aria-hidden="true" style="margin-left: 15px;">
+								<use xlink:href="#icon-weixin"></use>
+							</svg>
 						</el-tooltip>
 						<el-tooltip class="item" effect="dark" content="加我QQ" placement="bottom">
-							<img class="tag" style="width: 35px; height: 40px;" src="../../static/img/qq.png" alt="加我QQ"
-								@click="friendsLink('http://wpa.qq.com/msgrd?v=3&uin=2049448867&site=qq&menu=yes')">
+							<!-- <img class="tag" style="width: 35px; height: 40px;" src="../../static/img/qq.png" alt="加我QQ"
+								@click="friendsLink('http://wpa.qq.com/msgrd?v=3&uin=2049448867&site=qq&menu=yes')"> -->
+							<svg class="icon" aria-hidden="true" style="margin-left: 15px;">
+								<use xlink:href="#icon-QQ" @click="friendsLink('http://wpa.qq.com/msgrd?v=3&uin=2049448867&site=qq&menu=yes')"></use>
+							</svg>
 						</el-tooltip>
 
 						<!-- <a href="http://wpa.qq.com/msgrd?v=3&uin=2236736269&site=qq&menu=yes" target="_blank">添加QQ好友</a>

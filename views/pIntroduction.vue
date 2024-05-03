@@ -50,7 +50,7 @@
           <div id="pre" :style="stylePre"></div>
           <div id="back" :style="styleBack"></div>
         </div>
-        <p>个人微信和QQ,可以扫码联系我(或打赏☺☺☺)哦！:</p>
+        <p>个人微信和QQ,可以扫码联系我(☺☺☺)哦！:</p>
       </div>
       <div style="text-align: center;">你也可以用鼠标拖动它旋转起来哦！</div>
     </el-main>

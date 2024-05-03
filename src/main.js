@@ -27,6 +27,10 @@ Router.prototype.push = function push(location, onResolve, onReject) {
 import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 
+
+// 阿里巴巴矢量图
+import '@/iconfont/iconfont.js'
+import '@/iconfont/iconfont.css'
 // use
 Vue.use(mavonEditor)
 

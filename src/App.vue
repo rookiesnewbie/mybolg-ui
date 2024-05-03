@@ -32,6 +32,16 @@ export default {
 </script>
 
 <style>
+.icon {
+  width: 3em; height: 5em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  margin-top: 5px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+
 .el-textarea__inner, .el-dialog, input{
     background-color: #ade3e3 !important;
 }

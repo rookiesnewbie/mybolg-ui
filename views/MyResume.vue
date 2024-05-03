@@ -77,7 +77,8 @@ export default {
       //   return
       // }
       this.$refs.upload.submit() // 提交上传请求
-      this.getResume()
+       // 接口调用成功后强制刷新页面
+       window.location.reload();
     },
     handleRemove(file, fileList) {
       return this.$confirm(`确定移除 ${file.name}？`)
